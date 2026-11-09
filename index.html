@@ -548,6 +548,76 @@ body.night .gf{color:#CFE8D0}
 body.night .rep .day,body.night .rep .kpi,body.night .rep .ubtns button{background:#1E3044;color:#E0F0FF;border-color:#36506A}
 body.night .rep .kpi b{color:#fff}
 @media (max-width:520px){.dcard b{font-size:20px}.dcard .di{width:50px;height:50px}.rep .bar{grid-template-columns:110px 1fr 46px;font-size:14px}.rep .day b{font-size:16px}}
+
+/* ===== round 2: labs, countdown, my questions, print sheet ===== */
+.dailyrow.small .dcard{flex:1 1 220px;max-width:300px;padding:10px 14px;border-width:3px}
+.dailyrow.small .dcard b{font-size:20px}.dailyrow.small .dcard .di{width:48px;height:48px}
+.dcard.lab{border-color:#5EC4FF;box-shadow:0 6px 0 #2E8FD0,0 14px 26px rgba(26,43,60,.1);animation-delay:.2s}
+.dcard.myq{border-color:#B88CFF;box-shadow:0 6px 0 #7E57C2,0 14px 26px rgba(26,43,60,.1);animation-delay:.26s}
+.dcard.count{flex-basis:100%;max-width:816px;border-color:var(--red);box-shadow:0 7px 0 #B8382E,0 16px 30px rgba(26,43,60,.12);background:linear-gradient(90deg,#FFF4F2,var(--paper))}
+.dcard.count .big{font-family:var(--disp);font-size:40px;color:var(--red);line-height:1;min-width:64px;text-align:center}
+.dcard.count .big small{font-size:13px;color:var(--red);margin:0}
+.labgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.labcard{display:flex;gap:12px;align-items:center;text-align:left;background:#F5FBFF;border:3px solid #BFE3FA;border-radius:20px;padding:12px;font:inherit;color:var(--ink);cursor:pointer;transition:transform .12s}
+.labcard:hover{transform:translateY(-3px)}.labcard .di{width:54px;height:54px;flex:none}.labcard .di svg{width:100%;height:100%}
+.labcard b{font-family:var(--disp);font-size:19px;display:block}.labcard small{font-weight:700;color:var(--muted,#5A6B7D)}
+.labcard.done{background:#F1FAEE;border-color:#A8D8A0}
+.utabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.utabs button{border:2.5px solid #CFE3D2;background:#fff;border-radius:14px;padding:7px 13px;font:inherit;font-weight:800;cursor:pointer;color:var(--ink)}
+.utabs button.on{background:var(--sky,#2F80ED);border-color:#1B5FB8;color:#fff}
+.labsec{background:#F8FCFF;border:2.5px solid #D6EAF7;border-radius:18px;padding:12px 16px;margin:10px 0}
+.labsec h4{font-family:var(--disp);font-size:20px;margin:0 0 6px;color:#1E5C99}
+.labsec ul{margin:0;padding-left:22px;font-weight:700;line-height:1.5}
+.steps{list-style:none;padding:0!important}
+.steps li{display:flex;gap:10px;align-items:flex-start;padding:6px 4px;cursor:pointer;border-radius:10px}
+.steps li .ck{flex:none;width:26px;height:26px;border:3px solid #90C4F0;border-radius:8px;display:grid;place-items:center;font-weight:900;color:#fff}
+.steps li.on .ck{background:var(--leaf);border-color:var(--leafd)}.steps li.on{color:#5A6B7D;text-decoration:line-through}
+.pred{display:flex;gap:8px;flex-wrap:wrap}
+.pred button{border:2.5px solid #CFE3D2;background:#fff;border-radius:14px;padding:8px 12px;font:inherit;font-weight:800;cursor:pointer;color:var(--ink)}
+.pred button.on{background:#FFF1C9;border-color:var(--sun2)}
+.grownup{display:inline-block;background:#FFF1C9;border:2px solid var(--sun2);border-radius:99px;padding:2px 10px;font-weight:800;font-size:13px;color:#8A5200}
+.reveal{background:#F1FAEE;border:3px solid #A8D8A0;border-radius:18px;padding:12px 16px;margin-top:10px;animation:dpop .5s both}
+.reveal h4{color:var(--leafd)}
+.mqform label{display:block;font-weight:800;margin:10px 0 4px}
+.mqform input,.mqform textarea{width:100%;box-sizing:border-box;font:inherit;font-size:18px;padding:10px 12px;border:3px solid #D9CCF5;border-radius:14px;background:#fff;color:#1d2b3a}
+.mqform textarea{min-height:70px;resize:vertical}
+.mqform .ok input{border-color:#A8D8A0}.mqform .wr input{border-color:#F5B7B0}
+.tipbox{background:#F6F0FF;border:2.5px dashed #B88CFF;border-radius:16px;padding:10px 14px;font-weight:700;margin:6px 0 4px}
+.myitem{border:2.5px solid #E2D7F7;border-radius:14px;padding:8px 12px;margin:6px 0;display:flex;gap:10px;align-items:flex-start}
+.myitem div{flex:1}.myitem button{border:0;background:#FDECEA;color:#B8382E;border-radius:10px;font-weight:800;padding:6px 10px;cursor:pointer;font:inherit}
+.rep .setrow{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.rep input[type=date]{font:inherit;font-weight:700;padding:7px 10px;border:2.5px solid #CFE3D2;border-radius:12px}
+.toggle{display:inline-flex;gap:8px;align-items:center;font-weight:800;cursor:pointer}
+.toggle input{width:22px;height:22px;accent-color:var(--leaf)}
+.psheet{background:#fff;color:#111;max-width:8in;margin:24px auto;padding:.45in .5in;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,.15);font-family:Nunito,system-ui,sans-serif;position:relative;z-index:2}
+.psheet .ph{display:flex;align-items:center;gap:12px;border-bottom:3px solid #E85A4F;padding-bottom:6px;margin-bottom:8px}
+.psheet .ph h2{font-family:var(--disp);font-size:26px;margin:0;flex:1}
+.psheet .ph svg{width:46px;height:46px}
+.psheet .meta{display:flex;gap:24px;font-weight:700;font-size:14px;margin-bottom:8px}
+.psheet .meta span{flex:1;border-bottom:1.5px solid #999;padding-bottom:2px}
+.psheet .pq{break-inside:avoid;padding:6px 0 8px;border-bottom:1px dashed #CCC}
+.psheet .pq .s{font-weight:800;font-size:15px}
+.psheet .pq .s i{font-style:normal;display:inline-block;width:22px;height:22px;border-radius:50%;background:#E85A4F;color:#fff;text-align:center;line-height:22px;margin-right:6px;font-size:13px}
+.psheet .pq .o{display:grid;grid-template-columns:1fr 1fr;gap:2px 16px;font-size:14px;margin:4px 0 0 28px}
+.psheet .pq .o span:before{content:attr(data-l);display:inline-block;width:18px;height:18px;border:1.6px solid #333;border-radius:50%;text-align:center;line-height:18px;font-size:11px;font-weight:800;margin-right:6px}
+.psheet .pq .tp{font-size:11px;color:#777;margin-left:28px}
+.psheet .key{margin-top:10px;padding-top:6px;border-top:2px dashed #999;font-size:12px;color:#444}
+.psheet .key b{font-family:var(--disp)}
+.psheet .tools{display:flex;gap:10px;justify-content:center;margin-bottom:14px}
+@media print{
+  @page{size:letter;margin:0}
+  body{background:#fff!important}
+  body > *:not(main){display:none!important}
+  main#app > *:not(.psheet){display:none!important}
+  main#app{padding:0!important;margin:0!important;min-height:0!important}
+  .psheet{box-shadow:none;margin:0;max-width:none;border-radius:0;padding:.35in .5in}
+  .psheet .pq{padding:4px 0 5px}
+  .psheet .tools{display:none!important}
+}
+body.night .labcard{background:#1E3044;border-color:#36506A;color:#E0F0FF}
+body.night .labsec{background:#1E3044;border-color:#36506A}
+body.night .labsec h4{color:#9CCBF5}
+@media (max-width:520px){.dailyrow.small{gap:10px}.dailyrow.small .dcard{flex:1 1 40%;max-width:none;padding:8px 10px;gap:8px;flex-direction:column;text-align:center}.dailyrow.small .dcard .di{width:40px;height:40px}.dailyrow.small .dcard b{font-size:17px}.dailyrow.small .dcard small{font-size:12px}.dcard.count .big{font-size:32px;min-width:48px}.psheet{padding:16px}.psheet .pq .o{grid-template-columns:1fr}}
 </style></head><body>
 <div id="world" aria-hidden="true"></div>
 <canvas id="fx" aria-hidden="true"></canvas>
@@ -1098,10 +1168,15 @@ function go(view){ if (curView !== null && curView !== view) wipe(); curView = v
   else if (view === "garden") garden();
   else if (view === "gwater") gardenWater();
   else if (view === "parent") parentReport();
+  else if (view === "labs") labsView();
+  else if (view === "lab") labView(window._lab);
+  else if (view === "myq") myqView();
+  else if (view === "mission") missionStart();
+  else if (view === "psheet") printSheet();
 
 
 
-  if (!["home","unit1","unit2","unit3","unit4","parent","garden"].includes(view)) setTimeout(() => dotSay(intro(view)), 400);
+  if (!["home","unit1","unit2","unit3","unit4","parent","garden","labs","lab","myq","psheet","mission"].includes(view)) setTimeout(() => dotSay(intro(view)), 400);
 }
 function intro(v){ return {learn: "Let's learn! Read each part, then try the quick check.", learn2: "Water is always moving! Let's explore the water cycle.", chain: "Remember: arrows point to the eater!", cycle: "E-L-P-A: Every Ladybug Pops out as an Adult!", adapt: "Ask: is it a body part, or an action?", wcycle: "Follow the water from the sun all the way back to the ground!", waterq: "How does water travel around our planet?", states: "Solid, liquid, or gas? You know this!",
   eco: "Aquatic = water. Terrestrial = land.", fossil: "Put on your detective hat!", myth: "Careful, some of these sound true but aren't!", flash: "Say the meaning first, then tap the card.",
@@ -1328,6 +1403,7 @@ function quizRender(){
     '<div class="opts' + (it.ord.length === 2 ? ' two' : '') + '" id="qo"></div><div id="qfb"></div><div class="nav"><span class="sp"></span><button class="btn wiggle" id="qnext" hidden onclick="quizNext()">' + (Q.i < Q.items.length - 1 ? 'Next' : 'Finish') + '</button></div>';
   app.innerHTML = panel(Q.title, '<span class="chip">' + (Q.i + 1) + ' of ' + Q.items.length + '</span>' + (Q.streak >= 3 ? '<span class="chip" style="background:#FFF1C9;border-color:#FFB000;color:#8A5200">' + Q.streak + ' in a row!</span>' : ''), {say: sayBtn("sayQ"), html: body});
   $("sayQ").onclick = () => say(it.s + ". " + it.ord.map((o, k) => "ABCD"[k] + ": " + o.t).join(". "));
+  if (LOG.ar) setTimeout(() => { if ($("sayQ") && Q.items[Q.i] === it && !Q.answered) $("sayQ").click(); }, 450);
   const box = $("qo");
   it.ord.forEach((o, k) => { const b = document.createElement("button"); b.className = "opt"; b.style.animationDelay = (.15 + k * .08) + "s"; b.innerHTML = '<span class="l">' + "ABCD"[k] + '</span><span>' + o.t + '</span>';
     b.onclick = () => { if (Q.answered) return; Q.answered = true;
@@ -1336,12 +1412,14 @@ function quizRender(){
       if (!o.c) { b.classList.add("no"); sfx("oops"); Q.streak = 0; dotSay(pick(HMM), "think"); }
       else { Q.right++; Q.streak++; sfx("good"); burst(...centerOf(b), Q.streak >= 3 ? 60 : 30); dotSay(Q.streak >= 3 ? Q.streak + " in a row! " + pick(YAY) : pick(YAY), "cheer"); }
       $("qfb").innerHTML = '<div class="fb ' + (o.c ? 'ok' : 'no') + '"><b>' + (o.c ? 'Correct!' : 'Not quite.') + '</b> ' + it.e + '</div>';
+      if (LOG.ar) say((o.c ? "Correct! " : "Not quite. ") + it.e);
       $("qnext").hidden = false; };
     box.appendChild(b); });
 }
 function quizNext(){ sfx("flip"); Q.answered = false; if (Q.i < Q.items.length - 1) { Q.i++; quizRender(); window.scrollTo(0, 0); } else { const s = starsFor(Q.right, Q.items.length);
     let extra = "";
     if (Q.key === "daily") { const first = finishDaily(), st = streak(); extra = '<div class="sunrow" style="margin:8px 0 0">' + SUNF + '</div><div class="rmsg">' + (first ? 'A new sunflower is in your garden! ' : 'Extra practice counts too! ') + (st > 1 ? '<b>' + st + ' days in a row!</b>' : 'Come back tomorrow to start a streak!') + '</div>' + (readyList().length ? '<div class="rmsg" style="font-size:16px">' + readyList().length + ' flower' + (readyList().length > 1 ? 's' : '') + ' in your garden can be watered.</div>' : ''); }
+    if (Q.key === "mission") { LOG.md = LOG.md || {}; LOG.md[dayKey()] = 1; saveLog(); const ti = testInfo(); extra = '<div class="rmsg">Mission complete! ' + (ti && ti.d > 1 ? 'See you tomorrow for the next one.' : 'Get a good night\'s sleep. Your brain saves what you learned while you sleep!') + '</div>'; }
     if (Q.key === "gwater") { const bl = Q.items.filter(it => (LOG.q[qid(it)] || {}).m).length, half = Q.items.filter(it => { const e = LOG.q[qid(it)] || {}; return !e.m && e.fx === 1; }).length; extra = '<div class="rmsg">' + (bl ? bl + ' flower' + (bl > 1 ? 's' : '') + ' bloomed! ' : '') + (half ? half + ' got watered once. Fix ' + (half > 1 ? 'them' : 'it') + ' again on another day to bloom.' : '') + '</div>'; }
     resultScreen(Q.title, Q.right, Q.items.length, s, Q.key, "", extra); } }
 
@@ -1358,7 +1436,7 @@ function resultScreen(title, right, total, s, key, unit, extra){
   let body = '<div class="result"><div class="bigflower"><div class="ring">' + petals(14, "pet") + '</div><div class="core"><b>' + right + '</b><span>out of ' + total + '</span></div></div>' +
     '<div class="stars3" id="st3">' + [0, 1, 2].map(k => k < s ? STAR("on").replace('class="on"', 'class="on" style="animation-delay:' + (.3 + k * .35) + 's"') : STAR("")).join("") + '</div>' +
     (gain ? '<div class="rmsg" style="color:#B87900">+' + gain + ' new star' + (gain > 1 ? 's' : '') + ' for your jar!</div>' : '') + '<div class="rtitle">' + title + '</div><div class="rmsg">' + msg + (unit ? ' <span style="font-size:15px;opacity:.7">(' + unit + ')</span>' : '') + '</div>' + (extra || "") +
-    '<div class="nav" style="justify-content:center">' + (s === 3 && key !== "daily" && key !== "gwater" ? '<button class="btn" onclick="showCert(\'' + title.replace(/'/g,"\\'") + '\')">Certificate</button>' : '') + '<button class="btn" onclick="go(\'' + key + '\')">Play again</button><button class="btn go" onclick="go(\'' + backTo(key) + '\')">' + backLabel(key) + '</button></div></div>';
+    '<div class="nav" style="justify-content:center">' + (s === 3 && !["daily","gwater","mission"].includes(key) ? '<button class="btn" onclick="showCert(\'' + title.replace(/'/g,"\\'") + '\')">Certificate</button>' : '') + '<button class="btn" onclick="go(\'' + key + '\')">Play again</button><button class="btn go" onclick="go(\'' + backTo(key) + '\')">' + backLabel(key) + '</button></div></div>';
   app.innerHTML = panel(title, "", {say: "", html: body});
   sfx("win"); setTimeout(() => { burst(innerWidth / 2, innerHeight * .35, 70); if (s === 3) rain(); }, 300);
   dotSay(s === 3 ? "WOW! Three stars! I'm so proud of you!" : s === 2 ? "Two stars! You're almost there!" : "Every scientist practices. Let's try again!", "cheer");
@@ -1405,6 +1483,7 @@ function testRender(){
   app.innerHTML = panel("Practice Test", '<span class="chip">Question ' + (T.i + 1) + ' of ' + n + '</span><span class="chip">' + (TOPIC[q.t] || q.tp || "") + '</span>', {say: sayBtn("sayT"), html: body});
   document.querySelector(".panel").classList.remove("enter");
   $("sayT").onclick = () => say(q.s + ". " + q.ord.map((o, k) => "ABCD"[k] + ": " + o.t).join(". "));
+  if (LOG.ar && T._r !== T.i) { T._r = T.i; setTimeout(() => { if ($("sayT")) $("sayT").click(); }, 350); }
   const box = $("to");
   q.ord.forEach((o, k) => { const b = document.createElement("button"); b.className = "opt" + (T.ans[T.i] === k ? " sel" : ""); b.style.animation = "none"; b.innerHTML = '<span class="l">' + "ABCD"[k] + '</span><span>' + o.t + '</span>';
     b.onclick = () => { T.ans[T.i] = k; sfx("pop"); testRender(); }; box.appendChild(b); });
@@ -1416,6 +1495,7 @@ function testSubmit(){
     dotSay("Oops, you skipped some! Look for the light spots.", "think"); return; }
   let right = 0; const by = {}; const missed = [];
   const tk = T.key || "test", u1 = tk === "test";
+  if (T.mission) { LOG.md = LOG.md || {}; LOG.md[dayKey()] = 1; saveLog(); }
   T.qs.forEach((q, k) => { const g = u1 ? q.t : (q.tp || "Other"); by[g] = by[g] || [0, 0]; by[g][1]++; const ok = q.ord[T.ans[k]].c; logAns(q, ok); if (ok) { right++; by[g][0]++; } else missed.push(k); });
   const s = starsFor(right, n);
   const pct = right / n;
@@ -1489,11 +1569,13 @@ function dailyStart(){
   const fix = pickN(readyList(), 2, taken);
   const score = id => { const a = acc(id); return (a < 0 ? .35 : a) + Math.random() * .45; };
   const curPool = ids.filter(id => REG[id].u === cu).sort((a, b) => score(a) - score(b));
-  const cur = pickN(curPool, 3, taken);
+  const fk = LOG.focus && LOG.focus.split("|"), focusPool = fk && +fk[0] === cu ? ids.filter(id => REG[id].u === cu && REG[id].tp === fk[1]).sort((a, b) => score(a) - score(b)) : [];
+  const cur = pickN(focusPool, 2, taken); cur.push(...pickN(curPool, 3 - cur.length, taken));
+  const mine = shuffle(ids.filter(id => REG[id].mine && !taken.has(id))), useMine = mine.length && Math.random() < .5 ? pickN(mine, 1, taken) : [];
   const oldU = ids.filter(id => REG[id].u < cu);
   const oldPool = (oldU.length ? oldU : ids.filter(id => REG[id].u === cu)).sort((a, b) => { const sa = LOG.q[a] ? acc(a) : 1.2, sb = LOG.q[b] ? acc(b) : 1.2; return sa + Math.random() * .5 - (sb + Math.random() * .5); });
-  const old = pickN(oldPool, 5 - fix.length - cur.length, taken);
-  let all = fix.concat(cur, old);
+  const old = pickN(oldPool, 5 - fix.length - cur.length - useMine.length, taken);
+  let all = fix.concat(cur, useMine, old);
   if (all.length < 5) all = all.concat(pickN(shuffle(ids), 5 - all.length, taken));
   DAILY = {fix: new Set(fix)};
   quiz("daily", shuffle(all).map(id => REG[id]), "Dot's Daily 5", "5 quick questions. Some are from older units, so your brain keeps them!");
@@ -1510,7 +1592,7 @@ function flowerSVG(state, hue){
 }
 const SUNF = '<svg viewBox="0 0 40 40" aria-hidden="true"><g fill="#FFC53D">' + [0,45,90,135,180,225,270,315].map(a => '<ellipse cx="20" cy="7" rx="4" ry="7" transform="rotate(' + a + ' 20 20)"/>').join("") + '</g><circle cx="20" cy="20" r="8" fill="#8A5A33"/></svg>';
 
-function homeCards(){
+function homeCards0(){
   const t = dayKey(), done = (LOG.d[t] || {}).d5, st = streak(), w = wilted().length, rd = readyList().length;
   return '<div class="dailyrow">' +
     '<button class="dcard' + (done ? ' done' : '') + '" id="dailyBtn" onclick="sfx(\'pop\');go(\'daily\')"><span class="di">' + ICON("sun") + '</span><span><b>Dot\'s Daily 5' + (done ? '<span class="dbadge ok">Done today!</span>' : '') + '</b><small>5 quick questions, about 3 minutes' + (st ? ' <span class="flame">' + st + ' day' + (st > 1 ? 's' : '') + ' in a row</span>' : '') + '</small></span></button>' +
@@ -1540,6 +1622,7 @@ function parentReport(){
   const t = dayKey(), cu = curUnit();
   let body = '<div class="rep">';
   body += '<h3 style="margin-top:4px">Daily 5 unit</h3><div class="ubtns">' + [1, 2, 3, 4].map(u => '<button class="' + (u === cu ? 'on' : '') + '" onclick="LOG.cu=' + u + ';saveLog();parentReport()">' + u + '. ' + UNAMES[u] + '</button>').join("") + '</div><div class="note" style="margin-top:6px">Daily 5 asks 3 questions from this unit, 2 from earlier units, and brings back missed questions until she gets each one right on 2 different days.' + (LOG.cu ? '' : ' (Picked automatically from the school calendar.)') + '</div>';
+  body += reportSettings(cu);
   body += '<h3>Last 7 days</h3><div class="week">';
   let wn = 0, wr = 0, wd = 0;
   for (let k = 6; k >= 0; k--) { const dt = new Date(); dt.setDate(dt.getDate() - k); const key = dayKey(dt), d = LOG.d[key] || {n: 0, r: 0};
@@ -1561,7 +1644,7 @@ function parentReport(){
     if (weak.length) body += '<div class="fb no" style="margin-top:6px"><b>Review first:</b> ' + weak.map(x => x.tp + ' (Unit ' + x.u + ')').join(", ") + '</div>'; }
   // keeps missing
   const miss = wilted().sort((a, b) => LOG.q[b].w - LOG.q[a].w).slice(0, 10);
-  body += '<h3>Still missing (' + wilted().length + ')</h3>';
+  body += '<h3>Still missing (' + wilted().length + ')</h3><div class="nav" style="margin:0 0 10px"><button class="btn go" onclick="go(\'psheet\')">Print a review sheet</button><span class="note">One page from her misses and weakest topics, with an answer key.</span></div>';
   if (!miss.length) body += '<div class="note">Nothing waiting. Missed questions show up here until she fixes them.</div>';
   miss.forEach(id => { const q = REG[id], e = LOG.q[id]; body += '<div class="miss"><div style="font-weight:800">' + strip(q.s) + '</div><div class="r">Answer: ' + q.o[q.a] + '</div><div class="note">Unit ' + q.u + ' · ' + q.tp + ' · missed ' + e.w + 'x' + (e.fx ? ' · fixed once' : '') + '</div></div>'; });
   if (bloomed().length) body += '<div class="note" style="margin-top:8px">' + bloomed().length + ' question' + (bloomed().length > 1 ? 's' : '') + ' fixed (right on 2 different days).</div>';
@@ -1571,8 +1654,227 @@ function parentReport(){
 }
 
 const KEYUNIT = {}; [[ACTS, "unit1"], [ACTS2, "unit2"], [ACTS3, "unit3"], [ACTS4, "unit4"]].forEach(([A, u]) => A.forEach(a => KEYUNIT[a.k] = u));
-function backTo(k){ return k === "daily" ? "home" : k === "gwater" ? "garden" : (KEYUNIT[k] || "unit1"); }
-function backLabel(k){ return k === "daily" ? "Back home" : k === "gwater" ? "Back to my garden" : "Back to the trail"; }
+function backTo(k){ return k === "daily" || k === "mission" ? "home" : k === "gwater" ? "garden" : (KEYUNIT[k] || "unit1"); }
+function backLabel(k){ return k === "daily" || k === "mission" ? "Back home" : k === "gwater" ? "Back to my garden" : "Back to the trail"; }
+
+/* ================= ROUND 2: labs, countdown, my questions, print sheet, settings ================= */
+function esc(t){ return String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+function regMine(q){ q.mine = 1; q.tp = "My questions"; q.u = q.u || curUnit(); const id = qid(q); if (!REG[id]) REG[id] = q; }
+(LOG.my || []).forEach(regMine);
+
+const LABS = [
+ {id:"hunt", u:1, ic:"ladybug", t:"Ecosystem Hunt", sol:"3.5a", time:"20 min",
+  mat:["A piece of string about 3 feet long","Paper and pencil","A magnifying glass if you have one"],
+  pq:"In your little square of yard, will you find more living or nonliving things?", po:["More living things","More nonliving things","About the same"],
+  steps:["Go outside with a grown-up. Make a circle on the ground with the string.","Look closely inside the circle for 5 minutes.","Make two lists: LIVING (grass, ants, worms) and NONLIVING (rocks, soil, water, sunlight).","Count each list. Which one is longer?"],
+  what:"Most squares have lots of both! Even a small patch of yard is a tiny ecosystem.",
+  why:"An ecosystem has living parts (plants, animals) and nonliving parts (sunlight, water, soil, air). The living things need the nonliving things to survive."},
+ {id:"camo", u:1, ic:"stickbug", t:"Camouflage Bug Hunt", sol:"3.4a-b", time:"15 min",
+  mat:["Paper in 3 colors (green, brown, and a bright color like pink)","Scissors","A green towel or a patch of grass","A timer"],
+  pq:"Which color bugs will be the hardest to find?", po:["Green","Brown","Bright pink"],
+  steps:["Cut 10 small 'bugs' from each color (30 total).","A grown-up scatters them on the grass or towel while you look away.","Be a hungry bird! You have 30 seconds to pick up as many bugs as you can.","Count how many of each color are left. Those bugs 'survived'."],
+  what:"The bright bugs usually get picked first. The green and brown ones blend in and survive.",
+  why:"Camouflage is a physical adaptation. Animals that blend in are less likely to be eaten, so they live to have babies. Over a long time, the whole population can change."},
+ {id:"fossil", u:1, ic:"fossil_shell", t:"Make a Fossil", sol:"3.4c", time:"15 min + dry overnight",
+  mat:["Play-dough or salt dough","A shell, leaf, or small toy animal","A rolling pin or cup"],
+  pq:"After you take the shell out, what will be left in the dough?", po:["Nothing","The shape of the shell","A real shell"],
+  steps:["Flatten a ball of dough.","Press the shell or leaf firmly into it.","Gently lift the object out.","Let it dry overnight. Look closely at the details."],
+  what:"You made a MOLD: the shape of the shell pressed into the dough.",
+  why:"Real fossils form when a plant or animal is buried in mud. The mud turns to rock over a very long time, keeping its shape. Fossils show us what lived long ago and what the land was like."},
+ {id:"bag", u:2, ic:"cloud_rain", t:"Water Cycle in a Bag", sol:"3.7", time:"10 min + watch 2 days",
+  mat:["A zip-top sandwich bag","Water and blue food coloring (optional)","A marker","Tape and a sunny window"],
+  pq:"After a day in the sun, what will you see at the top of the bag?", po:["Water drops","Nothing","Ice"],
+  steps:["Draw a sun and a cloud on the bag with the marker.","Pour in about 1/4 cup of water (add a drop of food coloring).","Seal the bag tightly.","Tape it to a sunny window. Check it in the morning, after school, and the next day."],
+  what:"Drops form near the top of the bag and slide back down to the water.",
+  why:"The sun heats the water so it EVAPORATES into vapor. The vapor cools at the top and CONDENSES into drops (like a cloud). The drops fall (PRECIPITATION) and COLLECT at the bottom. The sun drives the whole cycle!"},
+ {id:"race", u:2, ic:"puddle", t:"Hot vs. Cold Dissolving Race", sol:"3.3", time:"10 min", grown:true,
+  mat:["2 clear cups","Warm tap water and cold water","2 teaspoons of sugar","2 spoons","A timer"],
+  pq:"In which cup will the sugar disappear faster?", po:["Warm water","Cold water","Same time"],
+  steps:["A grown-up fills one cup with warm tap water. Fill the other with cold water.","Add 1 teaspoon of sugar to each cup at the same time.","Stir each cup the same way, 10 stirs.","Watch and time how long until you can't see the sugar."],
+  what:"The sugar disappears faster in the warm water.",
+  why:"Sugar DISSOLVES: it spreads out into pieces too tiny to see. Many solids dissolve faster in warm water. The sugar is still there. Taste it! Bonus test: try salt, sand and oil. Which ones dissolve?"},
+ {id:"sweat", u:2, ic:"drop", t:"The Sweaty Glass", sol:"3.7c", time:"10 min",
+  mat:["A glass","Ice cubes and water","A paper towel"],
+  pq:"Where will the water on the OUTSIDE of the glass come from?", po:["It leaks through the glass","Water vapor in the air","It's magic"],
+  steps:["Dry the outside of the glass completely.","Fill it with ice and water.","Wait 5 to 10 minutes.","Wipe the outside with a paper towel. Is it wet?"],
+  what:"Drops of water appear on the outside of the glass.",
+  why:"The air has invisible water vapor in it. When the vapor touches the cold glass, it cools and CONDENSES into liquid drops. That is the same thing that makes clouds!"},
+ {id:"shake", u:3, ic:"soil", t:"Soil Shake Jar", sol:"3.6a", time:"10 min + wait overnight",
+  mat:["A clear jar with a lid","Soil from the yard (about 1/3 of the jar)","Water"],
+  pq:"After shaking, what will settle to the bottom first?", po:["Sand (biggest pieces)","Clay (tiniest pieces)","Leaves and twigs"],
+  steps:["Fill the jar 1/3 with soil.","Add water until the jar is almost full.","Close the lid tightly and shake for 1 minute.","Set it down and do not touch it. Look after 1 hour and again tomorrow."],
+  what:"Layers form: sand on the bottom, then silt, then clay. Bits of humus float on top.",
+  why:"Soil is a mix of rock pieces (sand, silt, clay), humus, water and air. Big heavy sand settles first; tiny clay settles last. Different soils have different mixes."},
+ {id:"erode", u:3, ic:"plant", t:"Erosion Tray Test", sol:"3.8c-d", time:"15 min",
+  mat:["2 baking pans or trays","Soil","A handful of grass, leaves or mulch","A cup of water","Something to tilt the pans (a book)"],
+  pq:"Which pan will lose more soil when it 'rains'?", po:["Bare soil","Soil covered with grass or leaves","Both the same"],
+  steps:["Fill both pans with soil. Cover one with grass, leaves or mulch.","Tilt both pans on a book, outside or in a sink.","Slowly pour a cup of water on the top of each pan.","Look at the water that runs off. Which is muddier?"],
+  what:"The bare pan loses much more soil. Its runoff water is muddy.",
+  why:"This is EROSION. Plants and mulch cover the soil, and roots hold it in place. That is why farmers plant cover crops and people plant trees to protect soil, which forms very slowly."},
+ {id:"dig", u:3, ic:"worm", t:"Soil Detective", sol:"3.6", time:"15 min",
+  mat:["A small shovel or spoon","A paper plate","A magnifying glass if you have one","Gloves"],
+  pq:"Will you find any living things in a scoop of soil?", po:["Yes","No"],
+  steps:["With a grown-up, dig up one scoop of soil and put it on the plate.","Spread it out with a stick.","Sort what you find: rocks, roots, dead leaves (humus), living things.","Put everything back where you found it when you're done."],
+  what:"You'll likely find tiny rocks, roots, bits of leaves, and maybe worms, ants or bugs.",
+  why:"Healthy soil is full of life! Worms and tiny living things break down dead plants into humus, which gives plants nutrients."},
+ {id:"ramp", u:4, ic:"ramp", t:"Book Ramp Race", sol:"3.2a-c", time:"15 min",
+  mat:["A board or big hardcover book","A stack of books","A toy car","A tape measure or ruler"],
+  pq:"If you make the ramp higher, will the car go farther?", po:["Farther","Shorter","Same distance"],
+  steps:["Lean the board on 1 book to make a ramp.","Let the car roll down (don't push!). Measure how far it goes.","Add a second and third book. Roll the car again each time.","Compare your three distances."],
+  what:"The higher the ramp, the faster and farther the car goes.",
+  why:"Gravity pulls the car down the ramp. A steeper ramp lets gravity speed it up more. The ramp is an inclined plane, a simple machine."},
+ {id:"lever", u:4, ic:"lever", t:"Ruler Lever Lift", sol:"3.2c", time:"10 min",
+  mat:["A ruler","A pencil (the fulcrum)","A small stack of coins or a light toy","Tape"],
+  pq:"Where should the pencil go to make lifting EASIEST?", po:["Close to the coins","In the middle","Close to your finger"],
+  steps:["Lay the pencil on the table. Put the ruler across it like a seesaw.","Put the coins on one end of the ruler.","Press the other end down with one finger. Feel how hard it is.","Slide the pencil closer to the coins and try again. Then try it far away."],
+  what:"Lifting is easiest when the fulcrum (pencil) is close to the coins.",
+  why:"A lever is a bar that turns on a fulcrum. Moving the fulcrum changes how much force you need. It doesn't make less work; it changes the force."},
+ {id:"friction", u:4, ic:"wheel", t:"Friction Slide Test", sol:"3.2a", time:"10 min",
+  mat:["A toy car","A ramp (book + board)","3 surfaces: carpet, a towel, a smooth floor","Tape measure"],
+  pq:"On which surface will the car roll the farthest?", po:["Smooth floor","Carpet","Towel"],
+  steps:["Set up the ramp on the smooth floor. Roll the car and measure.","Move the ramp to the carpet. Roll and measure.","Lay the towel down. Roll and measure.","Which surface slowed the car the most?"],
+  what:"The car rolls farthest on the smooth floor and the shortest on the towel or carpet.",
+  why:"FRICTION is a force that rubs against moving things and slows them down. Rough surfaces have more friction. Without friction, the car would keep rolling!"}
+];
+function labDone(id){ return (LOG.lab || {})[id]; }
+
+function homeCards(){
+  const ti = testInfo();
+  let h = "";
+  if (ti) {
+    const m = missionFor(ti.d), done = (LOG.md || {})[dayKey()];
+    h += '<div class="dailyrow"><button class="dcard count" onclick="sfx(\'pop\');go(\'' + (ti.d === 0 ? 'home' : 'mission') + '\')"><span class="big">' + ti.d + '<small>' + (ti.d === 1 ? 'day' : 'days') + '</small></span><span><b>' + (ti.d === 0 ? 'Test day! You\'ve got this!' : UNAMES[ti.u] + ' test countdown') + (done && ti.d ? '<span class="dbadge ok">Done today!</span>' : '') + '</b><small>' + (ti.d === 0 ? 'Read each question twice. Cross out answers you know are wrong.' : 'Today\'s mission: ' + m.t + ' · ' + m.d) + '</small></span></button></div>';
+  }
+  h += homeCards0();
+  const nl = LABS.filter(l => labDone(l.id)).length, nm = (LOG.my || []).length;
+  h += '<div class="dailyrow small"><button class="dcard lab" onclick="sfx(\'pop\');go(\'labs\')"><span class="di">' + ICON("cloud_rain") + '</span><span><b>Kitchen Labs</b><small>' + nl + ' of ' + LABS.length + ' done · real experiments</small></span></button>' +
+    '<button class="dcard myq" onclick="sfx(\'pop\');go(\'myq\')"><span class="di">' + ICON("owl") + '</span><span><b>Stump the Grown-up</b><small>' + (nm ? nm + ' question' + (nm > 1 ? 's' : '') + ' made' : 'Write your own question') + '</small></span></button></div>';
+  return h;
+}
+
+/* ---------- labs ---------- */
+function labsView(){
+  const u = window._labU || curUnit();
+  let body = '<p class="gintro">Real science you can do at home! Make a prediction, do the experiment, then find out why it works.</p>';
+  body += '<div class="utabs">' + [1, 2, 3, 4].map(x => '<button class="' + (x === u ? 'on' : '') + '" onclick="window._labU=' + x + ';labsView()">' + x + '. ' + UNAMES[x] + '</button>').join("") + '</div><div class="labgrid">';
+  LABS.filter(l => l.u === u).forEach(l => { const d = labDone(l.id);
+    body += '<button class="labcard' + (d ? ' done' : '') + '" onclick="window._lab=\'' + l.id + '\';go(\'lab\')"><span class="di">' + ICON(l.ic) + '</span><span><b>' + l.t + '</b><small>' + l.time + (d ? ' · done! ⭐⭐⭐' : ' · 3 stars') + '</small></span></button>'; });
+  body += '</div><div class="nav" style="justify-content:center"><button class="btn alt" onclick="go(\'home\')">Home</button></div>';
+  app.innerHTML = panel("Kitchen Labs", '<span class="chip">' + LABS.filter(l => labDone(l.id)).length + ' of ' + LABS.length + ' done</span>', {say: "", html: body});
+}
+function labView(id){
+  const l = LABS.find(x => x.id === id); if (!l) return labsView();
+  window._labU = l.u;
+  const pk = (LOG.lp || {})[id], done = labDone(id);
+  let body = '<div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:6px"><span class="chip">Unit ' + l.u + ' · SOL ' + l.sol + '</span><span class="chip">' + l.time + '</span>' + (l.grown ? '<span class="grownup">Ask a grown-up to help</span>' : '') + '</div>';
+  body += '<div class="labsec"><h4>You need</h4><ul>' + l.mat.map(m => '<li>' + m + '</li>').join("") + '</ul></div>';
+  body += '<div class="labsec"><h4>1. Predict</h4><div style="font-weight:800;margin-bottom:8px">' + l.pq + '</div><div class="pred">' + l.po.map((o, k) => '<button class="' + (pk === k ? 'on' : '') + '" onclick="labPredict(\'' + id + '\',' + k + ')">' + o + '</button>').join("") + '</div></div>';
+  body += '<div class="labsec"><h4>2. Do it</h4><ul class="steps">' + l.steps.map((st, k) => '<li onclick="this.classList.toggle(\'on\');sfx(\'pop\')"><span class="ck">✓</span><span>' + st + '</span></li>').join("") + '</ul></div>';
+  body += '<div id="labres">' + (done ? labReveal(l) : '<div class="nav" style="justify-content:center"><button class="btn go wiggle" onclick="labFinish(\'' + id + '\')" ' + (pk === undefined ? 'title="Make a prediction first"' : '') + '>We did it! What happened?</button></div>') + '</div>';
+  body += '<div class="nav" style="justify-content:center"><button class="btn alt" onclick="go(\'labs\')">All labs</button><button class="btn alt" onclick="go(\'home\')">Home</button></div>';
+  app.innerHTML = panel(l.t, '<span class="chip">' + (done ? 'Done!' : '3 stars') + '</span>', {say: sayBtn("sayL"), html: body});
+  $("sayL").onclick = () => say(l.t + ". " + l.pq + " " + l.steps.join(" "));
+  setTimeout(() => dotSay(pk === undefined ? "First, make a prediction. Scientists always guess before they test!" : "Great prediction! Now do the experiment.", "cheer"), 400);
+}
+function labPredict(id, k){ LOG.lp = LOG.lp || {}; LOG.lp[id] = k; saveLog(); sfx("pop"); labView(id); }
+function labReveal(l){ const pk = (LOG.lp || {})[l.id];
+  return '<div class="reveal"><h4>What happened?</h4><div style="font-weight:700">' + l.what + '</div><h4 style="margin-top:10px">Why?</h4><div style="font-weight:700">' + l.why + '</div>' + (pk !== undefined ? '<div class="note" style="margin-top:8px">You predicted: <b>' + l.po[pk] + '</b>. Scientists learn from every prediction, right or wrong!</div>' : '') + '</div>'; }
+function labFinish(id){
+  if ((LOG.lp || {})[id] === undefined) { dotSay("Make a prediction first! Pick one of the answers in step 1.", "think"); sfx("oops"); return; }
+  LOG.lab = LOG.lab || {}; LOG.lab[id] = dayKey(); saveLog();
+  const gain = award("lab_" + id, 3); sfx("good");
+  const l = LABS.find(x => x.id === id);
+  $("labres").innerHTML = labReveal(l) + (gain ? '<div class="rmsg" style="text-align:center">+' + gain + ' stars for your jar!</div>' : '');
+  const r = $("labres").getBoundingClientRect(); burst(r.left + r.width / 2, r.top + 30, 70); dotSay("You did real science! Read why it works.", "cheer");
+}
+
+/* ---------- test countdown ---------- */
+function testInfo(){ if (!LOG.td || !LOG.td.date) return null; const t = new Date(LOG.td.date + "T00:00:00"), now = new Date(); now.setHours(0, 0, 0, 0);
+  const d = Math.round((t - now) / 864e5); if (isNaN(d) || d < 0 || d > 14) return null; return {d, u: LOG.td.u || curUnit()}; }
+function missionFor(d){
+  if (d >= 4) return {k: "mix", t: "Mixed review", d: "8 questions from the whole unit"};
+  if (d === 3) return {k: "weak", t: "Weak spots", d: "8 questions from your trickiest topics"};
+  if (d === 2) return {k: "test", t: "Practice test", d: "a full practice test"};
+  if (d === 1) return {k: "light", t: "Light review", d: "6 quick questions, then rest"};
+  return {k: "day", t: "Test day", d: ""};
+}
+function weakTopics(u){ const tops = {};
+  for (const id in REG) { const q = REG[id]; if (q.u !== u || q.mine) continue; const e = LOG.q[id]; const x = tops[q.tp] || (tops[q.tp] = {n: 0, r: 0}); if (e) { x.n += e.n; x.r += e.r; } }
+  return Object.keys(tops).sort((a, b) => { const A = tops[a], B = tops[b]; return (A.n ? A.r / A.n : .6) - (B.n ? B.r / B.n : .6); }); }
+function missionStart(){
+  const ti = testInfo(); if (!ti || ti.d === 0) return go("home");
+  const m = missionFor(ti.d), u = ti.u, ids = Object.keys(REG).filter(id => REG[id].u === u && !REG[id].mine), taken = new Set();
+  const sc = id => { const a = acc(id); return (a < 0 ? .4 : a) + Math.random() * .5; };
+  let pick = [];
+  if (m.k === "test") { go(["", "test", "test2", "test3", "test4"][u]); if (typeof T !== "undefined" && T) T.mission = true; return; }
+  if (m.k === "mix") pick = pickN(ids.sort((a, b) => sc(a) - sc(b)), 8, taken);
+  if (m.k === "weak") { const wt = weakTopics(u).slice(0, 2); pick = pickN(shuffle(wilted().filter(id => REG[id].u === u)), 3, taken); pick = pick.concat(pickN(ids.filter(id => wt.includes(REG[id].tp)).sort((a, b) => sc(a) - sc(b)), 8 - pick.length, taken)); if (pick.length < 8) pick = pick.concat(pickN(ids.sort((a, b) => sc(a) - sc(b)), 8 - pick.length, taken)); }
+  if (m.k === "light") { pick = pickN(shuffle(wilted().filter(id => REG[id].u === u)), 2, taken); pick = pick.concat(pickN(shuffle(ids.filter(id => LOG.q[id] && LOG.q[id].r > 0)), 6 - pick.length, taken)); if (pick.length < 6) pick = pick.concat(pickN(shuffle(ids), 6 - pick.length, taken)); }
+  quiz("mission", shuffle(pick).map(id => REG[id]), "Mission: " + m.t, ti.d + " day" + (ti.d > 1 ? "s" : "") + " until your " + UNAMES[u] + " test. " + (m.k === "light" ? "Easy does it tonight!" : "Let's get ready!"));
+}
+
+/* ---------- make your own question ---------- */
+function myqView(){
+  const cu = window._mqU || curUnit(), my = LOG.my || [];
+  let body = '<p class="gintro">Can you stump a grown-up? Write a science question. Your question will show up in your Daily 5 too!</p>';
+  body += '<div class="tipbox">Tip: a great wrong answer is one a classmate might really believe, like "plants eat soil." Writing those means you really know your stuff!</div>';
+  body += '<div class="mqform"><label>Which unit?</label><div class="utabs" style="margin:0">' + [1, 2, 3, 4].map(x => '<button class="' + (x === cu ? 'on' : '') + '" onclick="mqKeep();window._mqU=' + x + ';myqView()">' + x + '. ' + UNAMES[x] + '</button>').join("") + '</div>';
+  body += '<label for="mq_s">Your question</label><textarea id="mq_s" maxlength="200" placeholder="Example: What makes water evaporate?"></textarea>';
+  body += '<div class="ok"><label for="mq_a">The RIGHT answer</label><input id="mq_a" maxlength="80" placeholder="Example: heat from the sun"></div>';
+  body += '<div class="wr"><label for="mq_w1">A wrong answer</label><input id="mq_w1" maxlength="80"></div>';
+  body += '<div class="wr"><label for="mq_w2">Another wrong answer</label><input id="mq_w2" maxlength="80"></div>';
+  body += '<div class="wr"><label for="mq_w3">One more wrong answer (optional)</label><input id="mq_w3" maxlength="80"></div>';
+  body += '<label for="mq_e">Why is the right answer right? (optional)</label><input id="mq_e" maxlength="160">';
+  body += '<div class="nav" style="justify-content:center"><button class="btn go" onclick="mqSave()">Save my question</button></div></div>';
+  if (my.length) { body += '<h3 style="font-family:var(--disp);color:#7E57C2;margin:18px 0 6px">My questions (' + my.length + ')</h3>';
+    my.forEach((q, k) => body += '<div class="myitem"><div><b>' + q.s + '</b><div class="note">Answer: ' + q.o[0] + ' · Unit ' + q.u + '</div></div><button onclick="mqDel(' + k + ')">Delete</button></div>');
+    body += '<div class="nav" style="justify-content:center"><button class="btn" onclick="mqPlay()">Quiz me on my questions</button></div>'; }
+  body += '<div class="nav" style="justify-content:center"><button class="btn alt" onclick="go(\'home\')">Home</button></div>';
+  app.innerHTML = panel("Stump the Grown-up", '<span class="chip">' + my.length + ' made</span>', {say: "", html: body});
+  if (window._mqDraft) { for (const k in window._mqDraft) if ($(k)) $(k).value = window._mqDraft[k]; window._mqDraft = null; }
+}
+function mqKeep(){ const d = {}; ["mq_s","mq_a","mq_w1","mq_w2","mq_w3","mq_e"].forEach(k => { if ($(k)) d[k] = $(k).value; }); window._mqDraft = d; }
+function mqSave(){
+  const v = k => ($(k).value || "").trim(), qs = v("mq_s"), a = v("mq_a"), w = [v("mq_w1"), v("mq_w2"), v("mq_w3")].filter(Boolean);
+  if (qs.length < 8) { dotSay("Write your question first!", "think"); sfx("oops"); $("mq_s").focus(); return; }
+  if (!a) { dotSay("What's the right answer?", "think"); sfx("oops"); $("mq_a").focus(); return; }
+  if (w.length < 2) { dotSay("Add at least two wrong answers to trick the grown-up!", "think"); sfx("oops"); return; }
+  const q = {s: esc(qs), o: [esc(a)].concat(w.map(esc)), a: 0, e: v("mq_e") ? esc(v("mq_e")) : "Made by you!", u: window._mqU || curUnit()};
+  LOG.my = LOG.my || []; LOG.my.push(q); regMine(q); saveLog();
+  const n = LOG.my.length; award("myq", n >= 5 ? 3 : n >= 3 ? 2 : 1); sfx("good");
+  myqView(); burst(innerWidth / 2, 200, 60); dotSay(n === 1 ? "Your first question! Now ask a grown-up to try it." : "Great question! You're thinking like a teacher.", "cheer");
+}
+function mqDel(k){ const q = LOG.my[k]; if (!q) return; LOG.my.splice(k, 1); const id = qid(q); if (REG[id] && REG[id].mine) delete REG[id]; delete LOG.q[id]; saveLog(); myqView(); }
+function mqPlay(){ quiz("myq", (LOG.my || []).slice(), "My Questions", "Ask a grown-up to answer, or quiz yourself!"); }
+
+/* ---------- print sheet ---------- */
+function printSheet(){
+  const cu = curUnit(), taken = new Set();
+  let ids = pickN(wilted().sort((a, b) => LOG.q[b].w - LOG.q[a].w), 8, taken);
+  if (ids.length < 8) { const wt = weakTopics(cu).slice(0, 3); ids = ids.concat(pickN(shuffle(Object.keys(REG).filter(id => REG[id].u === cu && !REG[id].mine && wt.includes(REG[id].tp))), 8 - ids.length, taken)); }
+  if (ids.length < 8) ids = ids.concat(pickN(shuffle(Object.keys(REG).filter(id => REG[id].u === cu && !REG[id].mine)), 8 - ids.length, taken));
+  const key = [];
+  let h = '<div class="psheet"><div class="tools"><button class="btn go" onclick="window.print()">Print</button><button class="btn alt" onclick="go(\'psheet\')">New mix</button><button class="btn alt" onclick="go(\'parent\')">Back</button></div>';
+  h += '<div class="ph">' + DOTSVG + '<h2>Dot\'s Review Sheet</h2><span style="font-weight:800;color:#E85A4F">Science · Unit ' + cu + '</span></div><div class="meta"><span>Name:</span><span>Date:</span><span>Score: ____ / ' + ids.length + '</span></div>';
+  ids.forEach((id, n) => { const q = REG[id], ord = shuffle(q.o.map((t, k) => ({t, c: k === q.a})));
+    key.push((n + 1) + "-" + "ABCD"[ord.findIndex(o => o.c)]);
+    h += '<div class="pq"><div class="s"><i>' + (n + 1) + '</i>' + strip(q.s) + '</div><div class="o">' + ord.map((o, k) => '<span data-l="' + "ABCD"[k] + '">' + strip(o.t) + '</span>').join("") + '</div><div class="tp">' + q.tp + ' · Unit ' + q.u + '</div></div>'; });
+  h += '<div class="key"><b>Answer key (grown-ups, fold under):</b> ' + key.join(" &nbsp; ") + '</div></div>';
+  app.innerHTML = h; window.scrollTo(0, 0);
+}
+
+/* ---------- report settings ---------- */
+function reportSettings(cu){
+  const tps = [...new Set(Object.values(REG).filter(q => q.u === cu && !q.mine).map(q => q.tp))];
+  const fk = LOG.focus && LOG.focus.split("|"), ff = fk && +fk[0] === cu ? fk[1] : "";
+  let h = '<h3>This week in class</h3><div class="ubtns"><button class="' + (!ff ? 'on' : '') + '" onclick="delete LOG.focus;saveLog();parentReport()">Whole unit</button>' + tps.map(t => '<button class="' + (t === ff ? 'on' : '') + '" onclick="LOG.focus=\'' + cu + '|' + t.replace(/'/g, "") + '\';saveLog();parentReport()">' + t + '</button>').join("") + '</div><div class="note" style="margin-top:6px">Pick the topic the teacher is covering this week. 2 of the 3 new Daily 5 questions will come from it.</div>';
+  const ti = testInfo(), td = LOG.td || {};
+  h += '<h3>Test coming up?</h3><div class="setrow"><input type="date" id="tdDate" value="' + (td.date || '') + '"><div class="ubtns">' + [1, 2, 3, 4].map(u => '<button class="' + ((td.u || cu) === u ? 'on' : '') + '" onclick="LOG.td=Object.assign(LOG.td||{},{u:' + u + '});saveLog();parentReport()">' + UNAMES[u] + '</button>').join("") + '</div>' + (td.date ? '<button class="btn alt" onclick="delete LOG.td;saveLog();parentReport()">Clear</button>' : '') + '</div><div class="note" style="margin-top:6px">' + (ti ? 'Countdown is on: ' + ti.d + ' day' + (ti.d === 1 ? '' : 's') + ' left. The home screen shows a daily mission: mixed review, weak spots, a practice test, then a light review the night before.' : 'Set the date and a countdown with a daily mission appears on her home screen (up to 2 weeks ahead).') + '</div>';
+  h += '<h3>Reading help</h3><label class="toggle"><input type="checkbox" id="arT" ' + (LOG.ar ? 'checked' : '') + '> Read every question and answer aloud automatically</label><div class="note" style="margin-top:4px">Helps when reading speed gets in the way of showing what she knows.</div>';
+  setTimeout(() => { const d = $("tdDate"); if (d) d.onchange = () => { LOG.td = Object.assign(LOG.td || {}, {date: d.value, u: (LOG.td && LOG.td.u) || cu}); saveLog(); parentReport(); };
+    const a = $("arT"); if (a) a.onchange = () => { LOG.ar = a.checked ? 1 : 0; saveLog(); }; }, 0);
+  return h;
+}
 
 buildWorld(); paintSnd(); paintStars(); go("home");
 /* ================= CLOUD SAVE (claude.ai artifact db; falls back to this browser) ================= */
@@ -1584,6 +1886,9 @@ function mergeIn(rp, rl){
     for (const id in rl.q) { const a = LOG.q[id], b = rl.q[id]; if (!a || (b.n || 0) > (a.n || 0)) { LOG.q[id] = b; changed = true; } }
     for (const d in rl.d || {}) { const a = LOG.d[d], b = rl.d[d]; if (!a || (b.n || 0) > (a.n || 0)) { LOG.d[d] = Object.assign({}, b, {d5: (b.d5 || (a && a.d5)) ? 1 : 0}); changed = true; } else if (b.d5 && !a.d5) { a.d5 = 1; changed = true; } }
     if (rl.cu && !LOG.cu) { LOG.cu = rl.cu; changed = true; }
+    ["focus","td","ar"].forEach(k => { if (rl[k] !== undefined && LOG[k] === undefined) { LOG[k] = rl[k]; changed = true; } });
+    ["md","lp","lab"].forEach(k => { if (rl[k]) { LOG[k] = LOG[k] || {}; for (const x in rl[k]) if (LOG[k][x] === undefined) { LOG[k][x] = rl[k][x]; changed = true; } } });
+    if (rl.my && rl.my.length) { LOG.my = LOG.my || []; const have = new Set(LOG.my.map(q => q.s)); rl.my.forEach(q => { if (!have.has(q.s)) { LOG.my.push(q); regMine(q); changed = true; } }); }
   }
   return changed;
 }
